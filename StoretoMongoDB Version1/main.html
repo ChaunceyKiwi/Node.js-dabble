@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+
+<a>Name: <input type="text" id="name">  </input></a><br><br>
+<a>Age:  <input type="text" id="age">   </input></a><br><br>
+<a>Hobby:<input type="text" id="hobby"> </input></a><br><br>
+<a>Job: <input type="text" id="job">  </input></a><br><br>
+<input type="submit" onclick="show()" value="Submit text" />
+
+
+<script type="text/javascript">
+function show(){
+	var name=$("#name").val();
+	var age=$("#age").val();
+	var hobby=$("#hobby").val();
+	var job=$("#job").val();
+	var Person = {"name":name,"age":age, "hobby":hobby,"job":job};
+
+
+     
+     $.post("http://localhost:8888/upload",
+        Person,
+        function(){
+            alert("Done!");
+       });
+	//alert(Person.name);
+}
+
+</script>
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+
+
+</body>
+</html>
+

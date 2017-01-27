@@ -1,0 +1,59 @@
+<html>
+<head>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <button class="btn btn-success" onclick="WebNavi()">Website Navigation</button>
+        <button class="btn btn-warning" onclick="Blog()">SwitchToBlog</button>
+        <br>
+        <br>
+        <button class="btn btn-info" onclick="Music()">Music Play</button>
+        <button class="btn btn-danger" onclick="Memo()">Personal Memo</button>
+    </div>
+
+ <script>
+     function WebNavi()
+     {
+         $.post("http://localhost:1337",
+                 "WebNavi",
+                 function(response){
+                     console.log(response);
+                 });
+     }
+
+     function Blog()
+     {
+         $.post("http://localhost:1337",
+                 "Blog",
+                 function(response){
+                     console.log(response);
+                 });
+     }
+
+     function Music()
+     {
+         $.post("http://localhost:1337",
+                 "Music",
+                 function(response){
+                     console.log(response);
+                 });
+     }
+
+     function Memo()
+     {
+         $.post("http://localhost:1337",
+                 "Memo",
+                 function(response){
+                     console.log(response);
+                 });
+     }
+ </script>
+</body>
+
+
+
+
+

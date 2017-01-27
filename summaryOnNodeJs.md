@@ -1,0 +1,2 @@
+# Summary
+* For the PHP, serving web pages and recive HTTP requests does not happen within PHP, which is actually done by the Apache HTTP server. With Node.js, we need to implement the whole HTTP server.
